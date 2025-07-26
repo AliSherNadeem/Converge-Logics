@@ -36,23 +36,24 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="bg-white border-b border-gray-100 sticky top-0 z-50">
+    <nav className=" bg-white bg-gradient-to-b from-[#BAE706]/20 to-[#BAE706]/20 border-b border-gray-100 sticky top-0 z-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center">
-            <Image
+          <Image
               src="/assets/logos/converge-logo.png"
-              width={240}
+              width={40}
               height={40}
               alt="Converge Logics Logo"
+              className="h-10 w-auto"
             />
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
             {navItems.map((item) => (
-              <div key={item.name}>
+              <div key={item.name} className="transition-all transform hover:scale-105 duration-200">
                 {item.hasDropdown ? (
                   <DropdownMenu>
                     <DropdownMenuTrigger className="flex items-center space-x-1 text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium">
