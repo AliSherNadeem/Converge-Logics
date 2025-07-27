@@ -12,7 +12,7 @@ import {
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-// import logo from "@/public/assets/logos/converge-logo.png"
+import logo from "@/../public/assets/logos/converge_logo.png"
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -36,15 +36,15 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className=" bg-white bg-gradient-to-b from-[#BAE706]/20 to-[#BAE706]/20 border-b border-gray-100 sticky top-0 z-50">
+    <nav className=" bg-white bg-gradient-to-b from-[#BAE706]/15 to-[#BAE706]/15 border-b border-gray-100 sticky top-0 z-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center">
           <Image
-              src="/assets/logos/converge-logo.png"
-              width={40}
-              height={40}
+              src={logo}
+              width={500}
+              height={500}
               alt="Converge Logics Logo"
               className="h-10 w-auto"
             />
@@ -60,7 +60,7 @@ export default function Navbar() {
                       <span>{item.name}</span>
                       <ChevronDown className="h-4 w-4" />
                     </DropdownMenuTrigger>
-                    <DropdownMenuContent className="w-48">
+                    <DropdownMenuContent className="w-40">
                       {item.dropdownItems?.map((dropdownItem) => (
                         <DropdownMenuItem
                           key={dropdownItem.name}
@@ -68,7 +68,7 @@ export default function Navbar() {
                           inset={false}
                           asChild
                         >
-                          <Link href={dropdownItem.href} className="w-full">
+                          <Link href={dropdownItem.href} className="w-full hover:!bg-[#BAE706]">
                             {dropdownItem.name}
                           </Link>
                         </DropdownMenuItem>

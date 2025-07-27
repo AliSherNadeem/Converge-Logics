@@ -3,12 +3,8 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import uiIcon from "@/../public/assets/logos/ui-ux-icon.svg"
 
-// interface ServiceCard {
-//   title: string;
-//   description: string;
-//   icon: string;
-// }
 
 interface ServicesSectionProps {
   defaultTab?: "tech" | "marketing" | "finance";
@@ -24,96 +20,96 @@ export default function ServicesSection({
       {
         title: "UI/UX Design",
         description: "Designs that delight users and enhance experiences",
-        icon: "/placeholder.svg?height=80&width=80",
+         image: uiIcon,
       },
       {
         title: "Web Development",
         description: "Websites & apps built to perform, scale and succeed",
-        icon: "/placeholder.svg?height=80&width=80",
+         image: "/placeholder.svg?height=80&width=80",
       },
       {
         title: "App Development",
         description: "Mobile apps made better than before",
-        icon: "/placeholder.svg?height=80&width=80",
+         image: "/placeholder.svg?height=80&width=80",
       },
       {
         title: "Graphic Design",
         description: "Creative that drives traffic and converts",
-        icon: "/placeholder.svg?height=80&width=80",
+         image: "/placeholder.svg?height=80&width=80",
       },
       {
         title: "Project Management",
         description: "Streamlined processes for maximum efficiency",
-        icon: "/placeholder.svg?height=80&width=80",
+         image: "/placeholder.svg?height=80&width=80",
       },
       {
         title: "Business Analysis",
         description: "Business intelligence for your strategy",
-        icon: "/placeholder.svg?height=80&width=80",
+         image: "/placeholder.svg?height=80&width=80",
       },
     ],
     marketing: [
       {
         title: "Digital Marketing",
         description: "Comprehensive digital strategies that drive results",
-        icon: "/placeholder.svg?height=80&width=80",
+         image: "/placeholder.svg?height=80&width=80",
       },
       {
         title: "SEO Optimization",
         description: "Boost your search rankings and organic traffic",
-        icon: "/placeholder.svg?height=80&width=80",
+         image: "/placeholder.svg?height=80&width=80",
       },
       {
         title: "Social Media",
         description: "Engaging social media campaigns that convert",
-        icon: "/placeholder.svg?height=80&width=80",
+         image: "/placeholder.svg?height=80&width=80",
       },
       {
         title: "Content Strategy",
         description: "Compelling content that tells your brand story",
-        icon: "/placeholder.svg?height=80&width=80",
+         image: "/placeholder.svg?height=80&width=80",
       },
       {
         title: "Email Marketing",
         description: "Targeted email campaigns that drive engagement",
-        icon: "/placeholder.svg?height=80&width=80",
+         image: "/placeholder.svg?height=80&width=80",
       },
       {
         title: "Brand Identity",
         description: "Strong brand identity that stands out",
-        icon: "/placeholder.svg?height=80&width=80",
+         image: "/placeholder.svg?height=80&width=80",
       },
     ],
     finance: [
       {
         title: "Financial Planning",
         description: "Strategic financial planning for sustainable growth",
-        icon: "/placeholder.svg?height=80&width=80",
+         image: "/placeholder.svg?height=80&width=80",
       },
       {
         title: "Investment Analysis",
         description: "Smart investment strategies for maximum returns",
-        icon: "/placeholder.svg?height=80&width=80",
+         image: "/placeholder.svg?height=80&width=80",
       },
       {
         title: "Risk Management",
         description: "Comprehensive risk assessment and mitigation",
-        icon: "/placeholder.svg?height=80&width=80",
+         image: "/placeholder.svg?height=80&width=80",
       },
       {
         title: "Tax Optimization",
         description: "Efficient tax strategies to maximize savings",
-        icon: "/placeholder.svg?height=80&width=80",
+         image: "/placeholder.svg?height=80&width=80",
       },
       {
         title: "Cash Flow Management",
         description: "Optimize cash flow for better business operations",
-        icon: "/placeholder.svg?height=80&width=80",
+         image: "/placeholder.svg?height=80&width=80",
       },
       {
         title: "Financial Reporting",
         description: "Clear financial insights for informed decisions",
-        icon: "/placeholder.svg?height=80&width=80",
+         image: "/placeholder.svg?height=80&width=80",
       },
     ],
   };
@@ -132,9 +128,9 @@ return (
         </div>
 
         {/* Services Container - Corrected gradient with black background */}
-        <div className="max-w-7xl mx-auto bg-black rounded-[48px] p-8 md:p-12 relative overflow-hidden">
+        <div className="max-w-full mx-auto bg-black rounded-[48px] p-8 md:p-12 relative overflow-hidden">
           {/* Lime gradient overlay */}
-          <div className="absolute inset-0 bg-gradient-to-b from-[#BAE706]/20 via-[#BAE706]/5   pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#BAE706]/20 via-[#BAE706]/5 pointer-events-none" />
           
           <div className="relative z-10">
             <div className="text-center mt-8 mb-16">
@@ -195,11 +191,11 @@ return (
                     {service.description}
                   </p>
                   <Image
-                    src={service.icon || "/placeholder.svg"}
+                    src={service. image || "/placeholder.svg"}
                     alt={service.title}
-                    width={64}
-                    height={64}
-                    className="w-16 h-16 mx-auto"
+                    width={150}
+                    height={150}
+                    className="mx-auto"
                   />
                 </div>
               ))}

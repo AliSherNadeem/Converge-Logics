@@ -21,7 +21,7 @@ export default function BusinessHero({
             backgroundImage: "url('/assets/images/hero-illustration.png')",
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#BAE706]/20 via-[#BAE706]/10 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#BAE706]/15 via-[#BAE706]/10 to-[#BAE706]/10" />
       </div>
 
       {/* Decorative Icons */}
@@ -98,12 +98,12 @@ export default function BusinessHero({
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
             {title}
             <br />
-            <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
+            <span className="text-[#6E4BDC]">
               {subtitle}
             </span>
           </h1>
 
-          <p className="mt-6 text-lg md:text-xl text-gray-700 max-w-2xl mx-auto leading-relaxed">{description}</p>
+          <p className="mt-6 text-base md:text-xl text-gray-700 max-w-2xl mx-auto leading-relaxed">{description}</p>
 
           <div className="mt-8">
             <Button
