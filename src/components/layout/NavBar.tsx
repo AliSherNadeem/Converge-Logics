@@ -12,7 +12,7 @@ import {
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import logo from "@/../public/assets/logos/converge_logo.png"
+import logo from "@/../public/assets/logos/converge-logics-icon.svg"
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
