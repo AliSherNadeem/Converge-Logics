@@ -21,7 +21,7 @@ export default function BusinessHero({
             backgroundImage: "url('/assets/images/hero-illustration.png')",
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#BAE706]/15 via-[#BAE706]/10 to-[#BAE706]/10" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#BAE706]/10 via-[#BAE706]/10 to-[#BAE706]/8" />
       </div>
 
       {/* Decorative Icons */}
