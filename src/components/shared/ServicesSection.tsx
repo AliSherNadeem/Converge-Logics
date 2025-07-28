@@ -3,8 +3,19 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import uiIcon from "@/../public/assets/logos/ui-ux-icon.svg"
-
+import uiIcon from "@/../public/assets/images/ui-ux-icon.svg"
+import webDevIcon from "@/../public/assets/images/web dev icon.svg"
+import appDevIcon from "@/../public/assets/images/app dev icon.svg"
+import graphicDesignIcon from "@/../public/assets/images/graphic design icon.svg"
+import projectManagementIcon from "@/../public/assets/images/project management icon.svg"
+import businessIcon from "@/../public/assets/images/business icon.svg"
+import socialMediaIcon from "@/../public/assets/images/social-media-icon.svg"
+// import productMarketingIcon from "@/../public/assets/images/product-marketing-icon.svg"
+import emailMarketingIcon from "@/../public/assets/images/email-marketing-icon.svg"
+import digitalMarketingIcon from "@/../public/assets/images/digital-marketing-icon.svg"
+import bookKeepingIcon from "@/../public/assets/images/book-keeping-icon.svg"
+import financialConsultationIcon from "@/../public/assets/images/financial-consultation-icon.svg" 
+import financialReportingIcon from "@/../public/assets/images/financial-reporting-icon.svg";
 
 interface ServicesSectionProps {
   defaultTab?: "tech" | "marketing" | "finance";
@@ -25,92 +36,68 @@ export default function ServicesSection({
       {
         title: "Web Development",
         description: "Websites & apps built to perform, scale and succeed",
-         image: "/placeholder.svg?height=80&width=80",
+         image: webDevIcon,
       },
       {
         title: "App Development",
         description: "Mobile apps made better than before",
-         image: "/placeholder.svg?height=80&width=80",
+         image: appDevIcon,
       },
       {
         title: "Graphic Design",
         description: "Creative that drives traffic and converts",
-         image: "/placeholder.svg?height=80&width=80",
+         image: graphicDesignIcon,
       },
       {
         title: "Project Management",
         description: "Streamlined processes for maximum efficiency",
-         image: "/placeholder.svg?height=80&width=80",
+         image: projectManagementIcon,
       },
       {
         title: "Business Analysis",
         description: "Business intelligence for your strategy",
-         image: "/placeholder.svg?height=80&width=80",
+         image: businessIcon,
       },
     ],
     marketing: [
       {
-        title: "Digital Marketing",
-        description: "Comprehensive digital strategies that drive results",
-         image: "/placeholder.svg?height=80&width=80",
+        title: "Social Media Management",
+        description: "Algorithm mastered and audience captivated",
+         image: socialMediaIcon,
       },
-      {
-        title: "SEO Optimization",
-        description: "Boost your search rankings and organic traffic",
-         image: "/placeholder.svg?height=80&width=80",
-      },
-      {
-        title: "Social Media",
-        description: "Engaging social media campaigns that convert",
-         image: "/placeholder.svg?height=80&width=80",
-      },
-      {
-        title: "Content Strategy",
-        description: "Compelling content that tells your brand story",
-         image: "/placeholder.svg?height=80&width=80",
-      },
+      // {
+      //   title: "Product Marketing",
+      //   description: "Where trends meet transitions for maximum impact",
+      //    image: productMarketingIcon,
+      // },
       {
         title: "Email Marketing",
-        description: "Targeted email campaigns that drive engagement",
-         image: "/placeholder.svg?height=80&width=80",
+        description: "Engaging Makretings that convert leads to customers",
+         image: emailMarketingIcon,
       },
       {
-        title: "Brand Identity",
-        description: "Strong brand identity that stands out",
-         image: "/placeholder.svg?height=80&width=80",
+        title: "Digital Marketing",
+        description: "Where digital meets strategy for maximum reach",
+         image: digitalMarketingIcon,
       },
+
     ],
     finance: [
       {
-        title: "Financial Planning",
-        description: "Strategic financial planning for sustainable growth",
-         image: "/placeholder.svg?height=80&width=80",
+        title: "Book Keeping",
+        description: "Accurate financial records for informed decisions",
+         image: bookKeepingIcon,
       },
       {
-        title: "Investment Analysis",
-        description: "Smart investment strategies for maximum returns",
-         image: "/placeholder.svg?height=80&width=80",
-      },
-      {
-        title: "Risk Management",
-        description: "Comprehensive risk assessment and mitigation",
-         image: "/placeholder.svg?height=80&width=80",
-      },
-      {
-        title: "Tax Optimization",
-        description: "Efficient tax strategies to maximize savings",
-         image: "/placeholder.svg?height=80&width=80",
-      },
-      {
-        title: "Cash Flow Management",
-        description: "Optimize cash flow for better business operations",
-         image: "/placeholder.svg?height=80&width=80",
+        title: "Financial Consultation",
+        description: "Expert advice for financial growth and stability",
+         image: financialConsultationIcon,
       },
       {
         title: "Financial Reporting",
-        description: "Clear financial insights for informed decisions",
-         image: "/placeholder.svg?height=80&width=80",
-      },
+        description: "Comprehensive reports for transparency and insight",
+         image: financialReportingIcon,
+      },     
     ],
   };
 
@@ -128,7 +115,7 @@ return (
         </div>
 
         {/* Services Container - Corrected gradient with black background */}
-        <div className="max-w-full mx-auto bg-black rounded-[48px] p-8 md:p-12 relative overflow-hidden">
+        <div className="max-w-full mx-auto bg-black rounded-[48px] p-8 md:p-16 relative overflow-hidden">
           {/* Lime gradient overlay */}
           <div className="absolute inset-0 bg-gradient-to-b from-[#BAE706]/20 via-[#BAE706]/5 pointer-events-none" />
           
@@ -178,7 +165,7 @@ return (
             </div>
 
             {/* Service Cards Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
               {services[activeTab].map((service, index) => (
                 <div
                   key={index}
@@ -187,7 +174,7 @@ return (
                   <h3 className="text-xl font-semibold text-white mb-2 text-center">
                     {service.title}
                   </h3>
-                  <p className="text-gray-300 text-center text-sm mx-auto leading-relaxed mb-3">
+                  <p className="text-gray-300 text-center text-sm mx-12 leading-relaxed mb-6">
                     {service.description}
                   </p>
                   <Image
@@ -195,7 +182,7 @@ return (
                     alt={service.title}
                     width={150}
                     height={150}
-                    className="mx-auto"
+                    className="mx-auto py-2"
                   />
                 </div>
               ))}
