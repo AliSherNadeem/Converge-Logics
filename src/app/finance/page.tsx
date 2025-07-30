@@ -1,4 +1,6 @@
 import BusinessHero from "@/components/shared/BusinessHero"
+import HowWeWork from "@/components/shared/HowWeWork"
+import OurWork from "@/components/shared/OurWork"
 import ServicesSection from "@/components/shared/ServicesSection"
 
 
@@ -12,6 +14,8 @@ export default function FinancePage() {
     <>
       <BusinessHero />
       <ServicesSection defaultTab="finance" />
+      <HowWeWork />
+      <OurWork/>
     </>
   )
 }

@@ -1,4 +1,6 @@
 import BusinessHero from "@/components/shared/BusinessHero"
+import HowWeWork from "@/components/shared/HowWeWork"
+import OurWork from "@/components/shared/OurWork"
 import ServicesSection from "@/components/shared/ServicesSection"
 
 export const metadata = {
@@ -11,6 +13,8 @@ export default function Home() {
     <>
       <BusinessHero />
       <ServicesSection defaultTab="tech" />
+      <HowWeWork/>
+      <OurWork/>
     </>
   )
 }
