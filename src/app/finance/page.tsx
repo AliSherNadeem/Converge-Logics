@@ -1,7 +1,9 @@
 import BusinessHero from "@/components/shared/BusinessHero"
+import CustomerReviews from "@/components/shared/CustomerReviews"
 import HowWeWork from "@/components/shared/HowWeWork"
 import OurWork from "@/components/shared/OurWork"
 import ServicesSection from "@/components/shared/ServicesSection"
+import WhyChooseUs from "@/components/shared/WhyChooseUs"
 
 
 export const metadata = {
@@ -14,8 +16,10 @@ export default function FinancePage() {
     <>
       <BusinessHero />
       <ServicesSection defaultTab="finance" />
-      <HowWeWork />
+      <HowWeWork/>
       <OurWork/>
+      <WhyChooseUs/>
+      <CustomerReviews/>
     </>
   )
 }

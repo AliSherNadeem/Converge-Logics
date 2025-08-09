@@ -1,4 +1,5 @@
 import BusinessHero from "@/components/shared/BusinessHero"
+import CustomerReviews from "@/components/shared/CustomerReviews"
 import HowWeWork from "@/components/shared/HowWeWork"
 import OurWork from "@/components/shared/OurWork"
 import ServicesSection from "@/components/shared/ServicesSection"
@@ -17,6 +18,7 @@ export default function Home() {
       <HowWeWork/>
       <OurWork/>
       <WhyChooseUs/>
+      <CustomerReviews/>
     </>
   )
 }
