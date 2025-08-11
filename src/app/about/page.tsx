@@ -1,3 +1,7 @@
+import AboutHeroSection from '@/components/AboutHeroSection'
+import CustomerReviews from '@/components/shared/CustomerReviews'
+import HowWeWork from '@/components/shared/HowWeWork'
+import WhyChooseUs from '@/components/shared/WhyChooseUs'
 import React from 'react'
 
 
@@ -8,6 +12,11 @@ export const metadata = {
 
 export default function AboutPage() {
   return (
-    <div>About page Coming Soon...</div>
+    <>
+    <AboutHeroSection/>
+    <HowWeWork/>
+    <WhyChooseUs/>
+    <CustomerReviews/>
+    </>
   )
 }
